@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Webshop</title>
+
+    <link rel="icon" type="image/png" sizes="90x90" href="assets/images/favicon/shopping-cart-90.png">
+    <link rel="icon" type="image/png" sizes="60x60" href="assets/images/favicon/shopping-cart-60.png">
+    <link rel="icon" type="image/png" sizes="30x30" href="assets/images/favicon/shopping-cart-30.png">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  
+
+    <link href="css//bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/animacije/animacije.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+  </head>
+  <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+    <main>
+      <div class="page-loader">
+        <div class="loader">Loading...</div>
+      </div>
+      <nav  class="navbar navbar-dark fixed-top">
+        <div id="navbar" class="container-fluid">
+          <div class="brend">
+          <img class="logo" src="assets/images/favicon/logo.png" alt="logo">
+          <a id="brand" class="navbar-brand" href="index.html">Webshop</a>
+        </div>
+        <button type="button" class="kosarica btn position-relative fa fa-shopping-basket" onclick="otvoriKosaricu()">
+          <span id="kosarica-br" class="kosarica-broj position-absolute top-0 start-100 translate-middle badge rounded-pill ">0</span>
+        </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="p-4">
+          <ul >
+            <li class="navigacija"><a href="index.html">Shop</a></li>
+            <li class="navigacija"><a href="kontakt.html">Kontakt</a></li>
+            <li class="navigacija"><a href="kosarica.html">Košarica</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      <div class="main">
+        <section class="module bg-dark-60 contact-page-header bg-dark kontakt-slika wow pulse">
+          <div class="container kontakt-pocetak">
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3 kontakt-text">
+                <h2 class="module-title font-alt">Kontaktiraj nas</h2>
+                <div class="module-subtitle font-serif">Ako imaš pitanje o proizvodima, cijenama ili bilo čemu drugom, slobodno nam se javi. Radujemo se tvojoj poruci. ;)</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="module">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <h4 class="font-alt wow bounceInLeft" data-wow-delay="0.1s"><i class="fa-regular fa-envelope"></i> Pošalji nam poruku</h4><br/>
+                <form id="contactForm" role="form" action="mailto:antono.fabricni@skole.hr" method="post" enctype="text/plain">
+                  <div class="form-group wow bounceInLeft" data-wow-delay="0.2s">
+                    <label class="sr-only" for="name">Ime</label>
+                    <input class="form-control" type="text" id="name" name="ime" placeholder="Tvoje ime*" required="required" data-validation-required-message="Unesi ime."/>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group wow bounceInLeft" data-wow-delay="0.5s">
+                    <label class="sr-only" for="email">Email</label>
+                    <input class="form-control" type="email" id="email" name="email" placeholder="Tvoj Email*" required="required" data-validation-required-message="Unesi email."/>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group wow bounceInLeft" data-wow-delay="0.7s">
+                    <textarea class="form-control" rows="7" id="message" name="poruka" placeholder="Poruka*" required="required" data-validation-required-message="Napiši nam poruku."></textarea>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="text-center wow bounceInLeft" data-wow-delay="1s">
+                    <button id="submitb" class="btn btn-block btn-round btn-d" id="cfsubmit" type="submit">Pošalji</button>
+                  </div>
+                </form>
+                <hr class="shadow">
+                <div class="font-alt" id="contactFormResponse"></div>
+              </div>
+              <div class="col-sm-6">
+                <h4 class="font-alt wow bounceInRight" data-wow-delay="0.1s"><i class="fa-solid fa-circle-info"></i> Dodatne informacije</h4><br/>
+                <ul class="list-unstyled">
+                
+                <li class="wow bounceInRight" data-wow-delay="0.3s">Telefon: +385 99 888 7777</li>
+                <li class="wow bounceInRight" data-wow-delay="0.4s">Fax: +1 234 567 89 10</li>
+                <li class="wow bounceInRight" data-wow-delay="0.5s">Email:webshop@example.com</li>
+              </ul>
+                <hr/>
+                <h4 class="font-alt wow bounceInRight" data-wow-delay="0.5s"><i class="fa-regular fa-clock"></i> Radno vrijeme</h4><br/>
+                <ul class="list-unstyled">
+                  <li class="wow bounceInRight" data-wow-delay="0.7s">Pon - Pet: 08:00 - 18:00</li>
+                  <li class="wow bounceInRight" data-wow-delay="1s">Sub, Ned: 10:00 - 14:00</li>
+                </ul>
+                <hr class="shadow">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="map-section">
+          <div id="map"></div>
+        </section>
+   
+        <footer class="footer footer-boja" >
+          <div class="footer-manji">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="widget">
+                  <h5 class="widget-title font-alt footer-naslov"><i class="fa-regular fa-circle-question"></i> O nama</h5> <hr class="hr-f">
+                  <p>Webshop je online trgovina koja omogućuje kupcima da pregledavaju i kupuju proizvode ili usluge putem interneta.</p>
+                  <p>Telefon: +385 99 888 7777</p>Fax: +1 234 567 89 10
+                  <p>Email:<a href="kontakt.html">webshop@example.com</a></p>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="widget">
+                  <h5 class="widget-title font-alt footer-naslov"><i class="fa-solid fa-code"></i> Stranice</h5> <hr class="hr-f">
+                  <ul class="icon-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="shop-single.html">Proizvod</a></li>
+                    <li><a href="kosarica.html">Košarica</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="widget">
+                  <h5 class="widget-title font-alt footer-naslov"><i class="fa-solid fa-gears"></i> Ostalo</h5> <hr class="hr-f">
+                    <h5 class="rad-naslov ">Radno vrijeme:</h5>
+                    <ul>
+                      <li>Pon - Pet: 08:00 - 18:00</li>
+                      <li>Sub, Ned: 10:00 - 14:00</li>
+                    </ul>
+                    <h5 class="rad-naslov ">Današnji datum:</h5>
+                    <ul>
+                      <li id="datum">Današnji datum</li>
+                    </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr class="hr-f">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <p class="copyright font-alt">&copy; 2023&nbsp;<a href="index.html">Webshop</a>, All Rights Reserved</p> 
+              </div>
+              <div class="col-sm-6">
+                <div class="float-end"><a class="p-1" href="index.html"><i class="fa-solid fa-house"></i></a><a class="p-1" href="kontakt.html"><i class="fa-solid fa-phone"></i></a><a class="p-1" href="kosarica.html"><i class="fa-solid fa-basket-shopping"></i></a><a class="p-1" href="shop-single.html"><i class="fa-solid fa-tag"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </body>
+  
+    <!--Skripte-->
+    <script src="jquery/jquery-3.6.1.js"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/shop-load.js"></script>
+    <script src="js/shop-proizvod.js"></script>
+    <script src="js/wow/wow.js"></script>
+
+    <!--Funkcija za datum-->
+    <script>
+      // Pozivanje funkcije nakon što se stranica učita
+      window.onload = function() {
+        datum();
+        brojNaKosarici();
+      }
+    </script>
+</html>

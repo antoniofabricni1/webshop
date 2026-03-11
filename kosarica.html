@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Webshop</title>
+
+    <link rel="icon" type="image/png" sizes="90x90" href="assets/images/favicon/shopping-cart-90.png">
+    <link rel="icon" type="image/png" sizes="60x60" href="assets/images/favicon/shopping-cart-60.png">
+    <link rel="icon" type="image/png" sizes="30x30" href="assets/images/favicon/shopping-cart-30.png">
+    
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="css//bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/animacije/animacije.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+   
+  </head>
+  <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+    <main>
+      <div class="page-loader">
+        <div class="loader">Loading...</div>
+      </div>
+      <nav  class="navbar navbar-dark fixed-top">
+        <div id="navbar" class="container-fluid">
+          <div class="brend">
+          <img class="logo" src="assets/images/favicon/logo.png" alt="logo">
+          <a id="brand" class="navbar-brand" href="index.html">Webshop</a>
+        </div>
+        <button type="button" class="kosarica btn position-relative fa fa-shopping-basket" onclick="otvoriKosaricu()">
+          <span id="kosarica-br" class="kosarica-broj position-absolute top-0 start-100 translate-middle badge rounded-pill ">0</span>
+        </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="p-4">
+          <ul >
+            <li class="navigacija"><a href="index.html">Shop</a></li>
+            <li class="navigacija"><a href="kontakt.html">Kontakt</a></li>
+            <li class="navigacija"><a href="kosarica.html">Košarica</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main">
+        <section id="kosarica-bg" class="module module wow fadeInDown" data-wow-delay="0.3s">
+            <div class="container">
+                <div class="row">
+                        <h1 class="centar naslov-kosarica"></h1>
+                </div>
+              </div>
+            </section>
+            <div class="container wow fadeInUp">
+              <div class="row">
+                      <h1 class="centar naslov-kosarica">Košarica</h1>
+              </div>
+            </div>
+            <section class="module">
+                  <hr class="hr-f">
+                  <div class="tablicaK container">
+                    <div class="col-sm-12">
+                      <div class="row prazna-kosarica text-center">
+                        <h1 class="fa-solid fa-cart-arrow-down"></h1>
+                        <p>Košarica je prazna</p>
+                      </div>
+                    <table class="table kosarica-tab">
+                        <thead class="glavna-tab wow zoomInDown">
+                          <tr>
+                            <th scope="col"><i class="fa-regular fa-image p-2"></i>Slika</th>
+                            <th scope="col"><i class="fa-solid fa-signature p-2"></i>Ime</th>
+                            <th scope="col"><i class="fa-solid fa-money-bill-wave p-2"></i>Cijena</th>
+                            <th scope="col"><i class="fa-solid fa-list-ol p-2"></i>Količina</th>
+                            <th scope="col"><i class="fa-solid fa-money-bill-trend-up p-2"></i>Ukupno</th>
+                            <th scope="col"><i class="fa-solid fa-trash p-2"></i>Ukloni</th>
+                          </tr>
+                        </thead>
+                        <tbody class="align-middle">
+                          <tr class="kosarica-proizvod wow zoomIn">
+                            <td scope="row"class="kosarica-slika"><img class="kosarica-slika-img pokazivac" id="ps1" src="assets/images/shop/blank.jpg" alt="Accessories Pack" onclick="generiranjeProductStranice(this.id,'ps')"/></td>
+                            <td class="kosarica-ime-proizvoda pokazivac" id="i1">A</td>
+                            <td id="c1" >Otto</td>
+                            <td><input type="number" name="Količina" id="kolicina0" value="1" min="1" max="40" onChange="promjenaKolicineKosarica()"></td>
+                            <td class="kosarica-ukupno">Otto</td>
+                            <td ><a id="ukloni0" class="ukloni centar pokazivac" title="Ukloni" onclick="kosaricaUkloni(this)"><i class="fa fa-times"></i></a></td>
+                          </tr>
+                          <tr class="kosarica-proizvod wow zoomIn">
+                            <td scope="row"class="kosarica-slika"><img class="kosarica-slika-img pokazivac" id="ps2" src="assets/images/shop/blank.jpg" alt="Accessories Pack"/></td>
+                            <td class="kosarica-ime-proizvoda pokazivac" id="i2">A</td>
+                            <td id="c2">Otto</td>
+                            <td><input type="number" name="Količina" id="kolicina1" value="1" min="1" max="40" onChange="promjenaKolicineKosarica()"></td>
+                            <td class="kosarica-ukupno">Otto</td>
+                            <td><a id="ukloni1" class="ukloni centar pokazivac"  title="Ukloni" onclick="kosaricaUkloni(this)"><i class="fa fa-times"></i></a></td>
+                          </tr>
+                          <tr class="kosarica-proizvod wow zoomIn">
+                            <td scope="row"class="kosarica-slika"><img class="kosarica-slika-img pokazivac" id="ps3" src="assets/images/shop/blank.jpg" alt="Accessories Pack"/></td>
+                            <td class="kosarica-ime-proizvoda pokazivac" id="i3">A</td>
+                            <td id="c3">Otto</td>
+                            <td><input type="number" name="Količina" id="kolicina2" value="1" min="1" max="40" onChange="promjenaKolicineKosarica()"></td>
+                            <td class="kosarica-ukupno">Otto</td>
+                            <td><a id="ukloni2" class="ukloni centar pokazivac"  title="Ukloni" onclick="kosaricaUkloni(this)"><i class="fa fa-times"></i></a></td>
+                          </tr>
+                          <tr class="kosarica-proizvod wow zoomIn">
+                            <td scope="row"class="kosarica-slika"><img class="kosarica-slika-img pokazivac" id="ps4" src="assets/images/shop/blank.jpg" alt="Accessories Pack"/></td>
+                            <td class="kosarica-ime-proizvoda pokazivac" id="i4">A</td>
+                            <td id="c4">Otto</td>
+                            <td><input type="number" name="Količina" id="kolicina3" value="1" min="1" max="40" onChange="promjenaKolicineKosarica()"></td>
+                            <td class="kosarica-ukupno">Otto</td>
+                            <td><a id="ukloni3" class="ukloni centar pokazivac"  title="Ukloni" onclick="kosaricaUkloni(this)"><i class="fa fa-times"></i></a></td>
+                          </tr>
+                          <tr class="kosarica-proizvod wow zoomIn">
+                            <td scope="row"class="kosarica-slika"><img class="kosarica-slika-img pokazivac" id="ps5" src="assets/images/shop/blank.jpg" alt="Accessories Pack"/></td>
+                            <td class="kosarica-ime-proizvoda pokazivac" id="i5">A</td>
+                            <td id="c5">Otto</td>
+                            <td><input type="number" name="Količina" id="kolicina4" value="1" min="1" max="40" onChange="promjenaKolicineKosarica()"></td>
+                            <td class="kosarica-ukupno">Otto</td>
+                            <td><a id="ukloni4" class="ukloni centar pokazivac"  title="Ukloni" onclick="kosaricaUkloni(this)"><i class="fa fa-times"></i></a></td>
+                          </tr>
+                          <tr class="kosarica-proizvod wow zoomIn">
+                            <td scope="row"class="kosarica-slika"><img class="kosarica-slika-img pokazivac" id="ps6" src="assets/images/shop/blank.jpg" alt="Accessories Pack"/></td>
+                            <td class="kosarica-ime-proizvoda pokazivac" id="i6">A</td>
+                            <td id="c6">Otto</td>
+                            <td><input type="number" name="Količina" id="kolicina5" value="1" min="1" max="40" onChange="promjenaKolicineKosarica()"></td>
+                            <td class="kosarica-ukupno">Otto</td>
+                            <td><a id="ukloni5" class="ukloni centar pokazivac"  title="Ukloni" onclick="kosaricaUkloni(this)"><i class="fa fa-times"></i></a></td>
+                          </tr>
+                          <tr class="kosarica-proizvod wow zoomIn">
+                            <td scope="row"class="kosarica-slika"><img class="kosarica-slika-img pokazivac" id="ps7" src="assets/images/shop/blank.jpg" alt="Accessories Pack"/></td>
+                            <td class="kosarica-ime-proizvoda pokazivac" id="i7">A</td>
+                            <td id="c7">Otto</td>
+                            <td><input type="number" name="Količina" id="kolicina6" value="1" min="1" max="40" onChange="promjenaKolicineKosarica()"></td>
+                            <td class="kosarica-ukupno">Otto</td>
+                            <td><a id="ukloni6" class="ukloni centar pokazivac"  title="Ukloni" onclick="kosaricaUkloni(this)"><i class="fa fa-times"></i></a></td>
+                          </tr>
+                          <tr class="kosarica-proizvod wow zoomIn">
+                            <td scope="row"class="kosarica-slika"><img class="kosarica-slika-img pokazivac" id="ps8" src="assets/images/shop/blank.jpg" alt="Accessories Pack"/></td>
+                            <td class="kosarica-ime-proizvoda pokazivac" id="i8">A</td>
+                            <td id="c8">Otto</td>
+                            <td><input type="number" name="Količina" id="kolicina7" value="1" min="1" max="40" onChange="promjenaKolicineKosarica()"></td>
+                            <td class="kosarica-ukupno">Otto</td>
+                            <td><a id="ukloni7" class="ukloni centar pokazivac"  title="Ukloni" onclick="kosaricaUkloni(this)"><i class="fa fa-times"></i></a></td>
+                          </tr>
+                          <tr class="kosarica-proizvod wow zoomIn">
+                            <td scope="row"class="kosarica-slika"><img class="kosarica-slika-img pokazivac" class="kosarica-slika-img" id="ps9" src="assets/images/shop/blank.jpg" alt="Accessories Pack"/></td>
+                            <td class="kosarica-ime-proizvoda pokazivac" id="i9">A</td>
+                            <td id="c9">Otto</td>
+                            <td><input type="number" name="Količina" id="kolicina8" value="1" min="1" max="40" onChange="promjenaKolicineKosarica()"></td>
+                            <td class="kosarica-ukupno">Otto</td>
+                            <td><a id="ukloni8" class="ukloni centar pokazivac"  title="Ukloni" onclick="kosaricaUkloni(this)"><i class="fa fa-times"></i></a></td>
+                          </tr>
+                        </tbody>
+                      </table>  
+                      <div class="col-sm-3 col-sm-offset-3 container wow zoomInUp">
+                        <div class="form-group brisanje">
+                          <button  class="brisanje-tipka" value="Izbriši sve" onclick="isprazniKosaricu()">Izbriši sve</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        </section>
+        <section class="module">
+          <hr class="hr-f">
+<div class="checkout-sve container wow fadeInRight">
+  <div class="col-sm-4 float-end">
+    
+    <table style="border: 1px solid #cacaca;" class="table table-striped">
+      <thead >
+        <label for="table" style="font-weight: 600;">Ukupno</label>
+        <tr>
+          <th scope="col">Košarica:</th>
+          <td id="checkout-kosarica">/</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="kosarica-proizvod">
+          <th scope="col">Dostava:</th>
+          <td  id="shipping">3.00€</td>
+        </tr>       
+        <tr class="kosarica-proizvod">
+          <th scope="col">Ukupno:</th>
+          <td id="checkout-ukupno" >/</td>
+        </tr>             
+      </tbody>
+    </table>
+    <input type="button" class="btns float-end" value="Dovrši" data-bs-toggle="modal" data-bs-target="#dovrsikupnju">
+  </div>
+</div>
+        
+          <div class="modal fade modal-dialog modal-dialog-centered" id="dovrsikupnju" tabindex="-1" aria-labelledby="dovrsikupnjuLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="dovrsikupnjuLabel">Dovrši kupnju</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <label for="basic-url" class="form-label">Ime i prezime</label>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Ime" aria-label="Ime" aria-describedby="basic-addon1" required>
+                    <input type="text" class="form-control" placeholder="Prezime" aria-label="Prezime" aria-describedby="basic-addon1" required>
+                  </div>
+                  <label for="basic-url" class="form-label">Adresa e-pošte</label>
+                  <div  class="input-group mb-3">
+                    <input style="text-transform: lowercase;" type="text" class="form-control" placeholder="Mail" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <span class="input-group-text">@</span>
+                    <select style="text-align: left;text-transform: lowercase;" id="filter-mail" class="input-group-text form-control">
+                      <option selected="selected">gmail.com</option>
+                      <option>yahoo.com</option>
+                      <option>outlook.com</option>
+                      <option>hotmail.com</option>
+                    </select> 
+                  </div>
+                  <label for="Adresa" class="form-label">Adresa</label>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Adresa" aria-label="Adresa" aria-describedby="basic-addon1">
+                  </div>
+                  <label for="Adresa" class="form-label">Telefon</label>
+                  <div class="input-group mb-3">
+                    <input type="tel" class="form-control" placeholder="Broj telefona" aria-label="Telefon" aria-describedby="basic-addon1">
+                  </div>
+                  <label for="Adresa" class="form-label">Grad i poštanski broj</label>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Grad" aria-label="Grad" aria-describedby="basic-addon1">
+                    <input type="number" class="form-control" placeholder="poštanski broj" aria-label="pbroj" aria-describedby="basic-addon1">
+                  </div> 
+                <div class="modal-footer">
+                  <button style="position: static;" type="button" class="btn btns" data-bs-dismiss="modal">Zatvori</button>
+                  <button style="position: static;" type="submit" class="btn btns">Potvrdi</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <footer class="footer footer-boja" >
+          <div class="footer-manji">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="widget">
+                  <h5 class="widget-title font-alt footer-naslov"><i class="fa-regular fa-circle-question"></i> O nama</h5> <hr class="hr-f">
+                  <p>Webshop je online trgovina koja omogućuje kupcima da pregledavaju i kupuju proizvode ili usluge putem interneta.</p>
+                  <p>Telefon: +385 99 888 7777</p>Fax: +1 234 567 89 10
+                  <p>Email:<a href="kontakt.html">webshop@example.com</a></p>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div>
+                  <h5 class="widget-title font-alt footer-naslov"><i class="fa-solid fa-code"></i> Stranice</h5> <hr class="hr-f">
+                  <ul class="icon-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="shop-single.html">Proizvod</a></li>
+                    <li><a href="kosarica.html">Košarica</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="widget">
+                  <h5 class="widget-title font-alt footer-naslov"><i class="fa-solid fa-gears"></i> Ostalo</h5> <hr class="hr-f">
+                    <h5 class="rad-naslov ">Radno vrijeme:</h5>
+                    <ul>
+                      <li>Pon - Pet: 08:00 - 18:00</li>
+                      <li>Sub, Ned: 10:00 - 14:00</li>
+                    </ul>
+                    <h5 class="rad-naslov ">Današnji datum:</h5>
+                    <ul>
+                      <li id="datum">Današnji datum</li>
+                    </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr class="hr-f">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <p class="copyright font-alt">&copy; 2023&nbsp;<a href="index.html">Webshop</a>, All Rights Reserved</p> 
+              </div>
+              <div class="col-sm-6">
+                <div class="float-end"><a class="p-1" href="index.html"><i class="fa-solid fa-house"></i></a><a class="p-1" href="kontakt.html"><i class="fa-solid fa-phone"></i></a><a class="p-1" href="kosarica.html"><i class="fa-solid fa-basket-shopping"></i></a><a class="p-1" href="shop-single.html"><i class="fa-solid fa-tag"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </body>
+    <!--Skripte-->
+    <script src="jquery/jquery-3.6.1.js"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/shop-load.js"></script>
+    <script src="js/shop-proizvod.js"></script>
+    <script src="js/wow/wow.js"></script>
+
+    
+    
+    <!--Funkcija za datum-->
+    <script>
+      // Pozivanje funkcije nakon što se stranica učita
+      window.onload = function() {
+        datum();
+        homePageSlike();
+        brojNaKosarici();
+        generirajUKosaricu();
+        praznaKosarica();
+        document.getElementById("dovrsikupnju").style.display = 'none'; //skrivanje završne forme kako bi mogli koristiti elemente koje ona prekriva
+      }
+      
+    </script>
+   
+</html>

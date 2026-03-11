@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Webshop</title>
+
+    <link rel="icon" type="image/png" sizes="90x90" href="assets/images/favicon/shopping-cart-90.png">
+    <link rel="icon" type="image/png" sizes="60x60" href="assets/images/favicon/shopping-cart-60.png">
+    <link rel="icon" type="image/png" sizes="30x30" href="assets/images/favicon/shopping-cart-30.png">
+    
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="css//bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/animacije/animacije.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        
+
+   
+  </head>
+  <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+    <main>
+      <div class="page-loader">
+        <div class="loader">Loading...</div>
+      </div>
+      <nav  class="navbar navbar-dark fixed-top">
+        <div id="navbar" class="container-fluid">
+          <div class="brend">
+          <img class="logo" src="assets/images/favicon/logo.png" alt="logo">
+          <a id="brand" class="navbar-brand" href="index.html">Webshop</a>
+        </div>
+        <button type="button" class="kosarica btn position-relative fa fa-shopping-basket" onclick="otvoriKosaricu()">
+          <span id="kosarica-br" class="kosarica-broj position-absolute top-0 start-100 translate-middle badge rounded-pill ">0</span>
+        </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="p-4">
+          <ul >
+            <li class="navigacija"><a href="index.html">Shop</a></li>
+            <li class="navigacija"><a href="kontakt.html">Kontakt</a></li>
+            <li class="navigacija"><a href="kosarica.html">Košarica</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      <div class="main">
+        <div class="row sl wow fadeInRight" data-wow-delay="0.5s">
+          <img id="bg-slika"  src="assets\images\shop/woman-gdef1f7fb9_1920.jpg" alt="bg">
+          
+          <div class="col-sm-6 col-sm-offset-3 bg-text">
+            <h2 class="module-title font-alt">Webshop</h2>
+            <div class="module-subtitle font-serif">Web trgovine su revolucionarne jer omogućuju kupcima da kupuju bilo gdje i bilo kad, bez obzira na vrijeme ili lokaciju.</div>
+          </div>
+          </div>
+        <section  class="module bg-dark-60 shop-page-header citat wow fadeInLeft" data-wow-delay="0.5s">
+          <blockquote class="blockquote blockquote-custom bg-white p-5  rounded">
+            <div class="blockquote-custom-icon shadow-sm quote-boja"><i class="fa fa-quote-left text-white "></i></div>
+            <p class="mb-0 mt-2 font-italic">"Web trgovina je jedna od najboljih prilika za one koji žele pokrenuti svoj vlastiti posao. Omogućuje prodaju proizvoda ili usluga bez potrebe za fizičkom trgovinom, što daje više fleksibilnosti i smanjuje troškove. Ali, kao i svaki posao, potrebno je mnogo rada i upornosti da biste postigli uspjeh u online trgovini.<a href="#" class="text-info"></a>"</p>
+            <footer class="blockquote-footer pt-4 mt-4 border-top">
+                <cite>Mark Cuban</cite>
+            </footer>
+        </blockquote>
+        </section>
+        <section class="filteri">
+          <div class="container wow fadeInUp">
+            <div class="row">
+              <div class="col-sm-4 mb-sm-20">
+                <select id="filter2" class="form-control">
+                  <option selected="selected">Žene i muškarci</option>
+                  <option>Žene</option>
+                  <option>Muškarci</option>
+                </select> 
+              </div>
+              <div class="col-sm-2 mb-sm-20">
+                <select id="filter3" class="form-control">
+                  <option selected="selected">Sve</option>
+                  <option>Odjeća</option>
+                  <option>Dekoracije</option>
+                </select>
+              </div>
+              <div class="col-sm-3 mb-sm-20">
+                <select id="filter1" class="form-control">
+                  <option selected="selected">Valuta: Euro(€)</option>
+                  <option>Valuta: Dolar($)</option>
+                  <option>Valuta: Funta(£)</option>
+                </select>
+              </div>
+              <div class="col-sm-3">
+                <button id="filteri-potvrdi" class="btns" type="submit" onclick="filteri()">Potvrdi</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr class="divider-w">
+        <section id="prodaja" class="module-small">
+          <div class="container proizvodi">
+            <div id="proizvod" class="row multi-columns-row wow zoomIn">
+              <div id="proizvod1" class="col-sm-6 col-md-4 col-lg-4" onclick="generiranjeProductStranice(this.id,'proizvod')">
+                <div class="shop-item">
+                  <div class="centar shop-item-image"><img id="ps1" src="assets/images/shop/p1/majica1.jpg" alt="Proizvod"/>
+                    <div id="dodaj0" class="centar shop-item-detail" onclick="kosarica(this)"><a  class="btn btn-round btn-b sbtn2"><span class="icon-basket">Dodaj U Košaricu</span></a></div>
+                  </div>
+                  <h4 class="shop-item-title font-alt" ><a id="i1" href="#">Accessories Pack</a></h4><span id="c1">£9.00</span>
+                </div>
+              </div>
+              <div id="proizvod2" class="col-sm-6 col-md-4 col-lg-4" onclick="generiranjeProductStranice(this.id,'proizvod')">
+                <div class="shop-item">
+                  <div class="centar shop-item-image"><img id="ps2" src="assets/images/shop/p2/majica1.jpg" alt="Proizvod"/>
+                    <div id="dodaj1" class="centar shop-item-detail" onclick="kosarica(this)" ><a class="btn btn-round btn-b sbtn2"><span class="icon-basket">Dodaj U Košaricu</span></a></div>
+                  </div>
+                  <h4 class="shop-item-title font-alt"><a id="i2" href="#">Men’s Casual Pack</a></h4><span id="c2">£9.00</span>
+                </div>
+              </div>
+              <div id="proizvod3" class="col-sm-6 col-md-4 col-lg-4" onclick="generiranjeProductStranice(this.id,'proizvod')">
+                <div class="shop-item">
+                  <div class="centar shop-item-image"><img id="ps3" src="assets/images/shop/p3/majica1.jpg" alt="Proizvod"/>
+                    <div id="dodaj2" class="centar shop-item-detail" onclick="kosarica(this)"><a class="btn btn-round btn-b sbtn2"><span class="icon-basket">Dodaj U Košaricu</span></a></div>
+                  </div>
+                  <h4 class="shop-item-title font-alt"><a id="i3" href="#">Men’s Garb</a></h4><span id="c3">£9.00</span>
+                </div>
+              </div>
+              <div id="proizvod4" class="col-sm-6 col-md-4 col-lg-4" onclick="generiranjeProductStranice(this.id,'proizvod')">
+                <div class="shop-item">
+                  <div class="centar shop-item-image"><img id="ps4" src="assets/images/shop/p4/majica1.jpg" alt="Proizvod"/>
+                    <div id="dodaj3" class="centar shop-item-detail" onclick="kosarica(this)"><a class="btn btn-round btn-b sbtn2"><span class="icon-basket">Dodaj U Košaricu</span></a></div>
+                  </div>
+                  <h4 class="shop-item-title font-alt"><a id="i4" href="#">Cold Garb</a></h4><span id="c4">£9.00</span>
+                </div>
+              </div>
+              <div id="proizvod5" class="col-sm-6 col-md-4 col-lg-4" onclick="generiranjeProductStranice(this.id,'proizvod')">
+                <div class="shop-item">
+                  <div class="centar shop-item-image"><img id="ps5" src="assets/images/shop/p5/majica1.jpg" alt="Proizvod"/>
+                    <div id="dodaj4" class="centar shop-item-detail" onclick="kosarica(this)"><a class="btn btn-round btn-b sbtn2"><span class="icon-basket">Dodaj U Košaricu</span></a></div>
+                  </div>
+                  <h4 class="shop-item-title font-alt"><a id="i5" href="#">Accessories Pack</a></h4><span id="c5">£9.00</span>
+                </div>
+              </div>
+              <div id="proizvod6" class="col-sm-6 col-md-4 col-lg-4" onclick="generiranjeProductStranice(this.id,'proizvod')">
+                <div class="shop-item">
+                  <div class="centar shop-item-image"><img id="ps6" src="assets/images/shop/p6/poster1.jpg" alt="Proizvod"/>
+                    <div id="dodaj5" class="centar shop-item-detail" onclick="kosarica(this)"><a class="btn btn-round btn-b sbtn2"><span class="icon-basket">Dodaj U Košaricu</span></a></div>
+                  </div>
+                  <h4 class="shop-item-title font-alt"><a id="i6" href="#">Men’s Casual Pack</a></h4><span id="c6">£9.00</span>
+                </div>
+              </div>
+              <div id="proizvod7" class="col-sm-6 col-md-4 col-lg-4" onclick="generiranjeProductStranice(this.id,'proizvod')">
+                <div class="shop-item">
+                  <div class="centar shop-item-image"><img id="ps7" src="assets/images/shop/p7/mask1.jpg" alt="Proizvod"/>
+                    <div id="dodaj6" class="centar shop-item-detail" onclick="kosarica(this)"><a  class="btn btn-round btn-b sbtn2"><span class="icon-basket">Dodaj U Košaricu</span></a></div>
+                  </div>
+                  <h4 class="shop-item-title font-alt"><a id="i7" href="#">Men’s Garb</a></h4><span id="c7">£9.00</span>
+                </div>
+              </div>
+              <div id="proizvod8" class="col-sm-6 col-md-4 col-lg-4" onclick="generiranjeProductStranice(this.id,'proizvod')">
+                <div class="shop-item">
+                  <div class="centar shop-item-image"><img id="ps8" src="assets/images/shop/p8/s1.jpg" alt="Proizvod"/>
+                    <div id="dodaj7" class="centar shop-item-detail" onclick="kosarica(this)"><a class="btn btn-round btn-b sbtn2"><span class="icon-basket">Dodaj U Košaricu</span></a></div>
+                  </div>
+                  <h4 class="shop-item-title font-alt"><a id="i8" href="#">Cold Garb</a></h4><span id="c8">£9.00</span>
+                </div>
+              </div>
+              <div id="proizvod9" class="col-sm-6 col-md-4 col-lg-4" onclick="generiranjeProductStranice(this.id,'proizvod')">
+                <div class="shop-item">
+                  <div class="centar shop-item-image"><img id="ps9" src="assets/images/shop/p9/c1.jpg" alt="Proizvod"/>
+                    <div id="dodaj8" class="centar shop-item-detail" onclick="kosarica(this)"><a class="btn btn-round btn-b sbtn2"><span class="icon-basket">Dodaj U Košaricu</span></a></div>
+                  </div>
+                  <h4 class="shop-item-title font-alt"><a id="i9" href="#">Accessories Pack</a></h4><span id="c9">£9.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <footer class="footer footer-boja" >
+          <div class="footer-manji">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="widget">
+                  <h5 class="widget-title font-alt footer-naslov"><i class="fa-regular fa-circle-question"></i> O nama</h5> <hr class="hr-f">
+                  <p>Webshop je online trgovina koja omogućuje kupcima da pregledavaju i kupuju proizvode ili usluge putem interneta.</p>
+                  <p>Telefon: +385 99 888 7777</p>Fax: +1 234 567 89 10
+                  <p>Email:<a href="kontakt.html">webshop@example.com</a></p>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="widget">
+                  <h5 class="widget-title font-alt footer-naslov"><i class="fa-solid fa-code"></i> Stranice</h5> <hr class="hr-f">
+                  <ul class="icon-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="shop-single.html">Proizvod</a></li>
+                    <li><a href="kosarica.html">Košarica</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="widget">
+                  <h5 class="widget-title font-alt footer-naslov"><i class="fa-solid fa-gears"></i> Ostalo</h5> <hr class="hr-f">
+                    <h5 class="rad-naslov ">Radno vrijeme:</h5>
+                    <ul>
+                      <li>Pon - Pet: 08:00 - 18:00</li>
+                      <li>Sub, Ned: 10:00 - 14:00</li>
+                    </ul>
+                    <h5 class="rad-naslov ">Današnji datum:</h5>
+                    <ul>
+                      <li id="datum">Današnji datum</li>
+                    </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr class="hr-f">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <p class="copyright font-alt">&copy; 2023&nbsp;<a href="index.html">Webshop</a>, All Rights Reserved</p> 
+              </div>
+              <div class="col-sm-6">
+                <div class="float-end"><a class="p-1" href="index.html"><i class="fa-solid fa-house"></i></a><a class="p-1" href="kontakt.html"><i class="fa-solid fa-phone"></i></a><a class="p-1" href="kosarica.html"><i class="fa-solid fa-basket-shopping"></i></a><a class="p-1" href="shop-single.html"><i class="fa-solid fa-tag"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </body>
+    <!--Skripte-->
+    <script src="jquery/jquery-3.6.1.js"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/shop-load.js"></script>
+    <script src="js/shop-proizvod.js"></script>
+    <script src="js/wow/wow.js"></script>
+
+    
+    
+    <!--Funkcija za datum-->
+    <script>
+      // Pozivanje funkcije nakon što se stranica učita
+      window.onload = function() {
+        datum();
+        homePageSlike();
+        brojNaKosarici();
+            }
+    </script>
+</html>
