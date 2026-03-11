@@ -1,0 +1,882 @@
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: scrollbar;
+  }
+  
+  body {
+    background: #fff;
+    font: 400 12px/1.8 "Open Sans", sans-serif;
+    color: #666;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  iframe {
+    border: 0;
+  }
+  a:not(.natpis){
+    Text-decoration: none;
+  }
+  
+  .align-center {
+    text-align: center;
+  }
+  
+  .align-left {
+    text-align: left !important;
+  }
+  
+  .position-relative {
+    position: relative;
+  }
+  
+  .leftauto {
+    right: 0 !important;
+    left: auto !important;
+  }
+  
+
+.product-gallery {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin: 10px 0 0;
+  }
+  
+  .product-gallery li {
+    display: inline-block;
+    width: 15%;
+    margin: 0 5px;
+  }
+  
+  .product-gallery li:first-child {
+    margin-left: 0;
+  }
+  
+  .product-title {
+    margin: 0 0 20px;
+    color: #111;
+  }
+  
+  
+  .amount {
+    font-size: 32px;
+    color: #111;
+  }
+
+  .navbar-custom + .main {
+    margin-top: 50px;
+  }
+  
+  .main {
+    position: relative;
+   
+    background-color: #fff;
+    z-index: 1;
+  }
+  
+  .module,
+  .module-small {
+    position: relative;
+    padding: 140px 0;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  
+  
+
+  /*button*/
+  .btns {
+    position: absolute;
+    border-radius: 0;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    padding: 8px 37px;
+    background: #111;
+    color: #fff;
+    border: 2px solid black;
+  }
+  .btns:hover{
+    position: absolute;
+    background: #fff;
+    color: #000;
+    border: 2px solid black;
+    transition: 0.1s ease-out;
+  }
+
+  /*shop single css*/
+
+  .sbtn{
+    position: absolute;
+    border-radius: 0;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    padding: 8px 37px;
+    background: #111;
+    color: #fff;
+    bottom: 50%;
+    opacity: 0;
+  }
+ 
+.product:hover{
+    color: #fff;
+}
+
+
+   .shop-item:hover .sbtn {
+    transition: 0.3s ease-out;
+    transform: translateX(25%);
+    opacity: 1;
+    bottom: 50%;
+    
+  }
+  .icon-basket{
+    opacity: 1;
+    color: #fff;
+    display: flex;
+  justify-content: center;
+   letter-spacing: 2px;
+      font-weight: 700;
+  }
+  
+
+  
+  #natpis{
+    font-weight: 700;
+    font-family:"Open Sans", sans-serif;
+    letter-spacing: 2px;
+    font-size: 15px;
+    color: #111;
+  }
+  #natpis:hover{
+    color: #666;
+  }
+  
+  #gallery1:hover,
+  #gallery2:hover,
+  #gallery3:hover{
+    transition: 0.3s ease-out;
+    opacity: 0.7;
+    
+ }
+
+ .natpis{
+  font-weight: 700;
+ }
+ #amount{
+  font-weight: 500;
+ }
+ /*loader*/
+
+ .page-loader {
+  position: fixed;
+  background: #000;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 9998;
+}
+
+.loader {
+  position: absolute;
+  border-left: 2px solid #ffffff;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  height: 46px;
+  width: 46px;
+  left: 50%;
+  top: 50%;
+  margin: -23px 0 0 -23px;
+  text-indent: -9999em;
+  font-size: 10px;
+  z-index: 9999;
+  -webkit-animation: load 0.8s infinite linear;
+  -moz-animation: load 0.8s infinite linear;
+  ms-animation: load 0.8s infinite linear;
+  o-animation: load 0.8s infinite linear;
+  animation: load 0.8s infinite linear;
+}
+
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+}
+
+@-webkit-keyframes load {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+/*--------------------------------------------------------------
+	Navbar
+--------------------------------------------------------------*/
+.navbar-custom {
+  background-color: rgba(10, 10, 10, 0.9);
+  border: 0;
+  border-radius: 0;
+  z-index: 1000;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  transition: background, padding 0.4s ease-in-out 0s;
+}
+
+.navbar-custom .navbar-brand {
+  letter-spacing: 4px;
+  font-weight: 400;
+  font-size: 22px;
+  color: #fff;
+}
+
+#navbarToggleExternalContent{
+  transform: translateY(1.5%);
+}
+
+#navbar{
+    background-color: rgb(0, 0, 0);
+}
+
+.navbar{
+  background-color: rgb(0, 0, 0);
+  border: 0;
+  border-radius: 0;
+  z-index: 1000;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  transition: background, padding 0.4s ease-in-out 0s;
+}
+
+.nav-boja{
+  color: #000;
+}
+
+#brand{
+  color: #fff;
+  font-family: "azonix";
+  transform: translateY(10%);
+}
+
+
+.navigacija a{
+  
+  margin: auto;
+  padding: 14px 16px;
+  font-weight: 700;
+  font-family:"Open Sans", sans-serif;
+  letter-spacing: 2px;
+  font-size: 15px;
+  color: rgb(175, 175, 175);
+  
+}
+.navigacija a:hover {
+  bottom: 50%;
+  transition: 0.2s ease-in-out;
+  color: #fff;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+
+.logo{
+  display: block;
+  width: 30px;
+  height: 30px; 
+  margin: 10px;
+}
+.brend{
+  display: flex;
+}
+
+.kosarica{
+  margin-left: auto; 
+  margin-right: 2vw;
+  background-color: #000;
+  border: 2px solid black;
+  color: #fafafa;
+}
+.kosarica:focus,
+.kosarica:hover
+{
+  background-color: #000;
+  border: 2px solid black;
+  color: #fafafa;
+}
+.kosarica-broj{
+  background-color: #fafafa;
+  color: #111;
+  font-size: 10px;
+  text-align: center;
+}
+/*shop sve*/
+
+
+
+.shop-item-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.shop-item-image img {
+  width: 100%;
+}
+
+.shop-item-detail,
+.shop-item-image:after {
+  transition: all 0.4s ease-in-out 0s;
+  opacity: 1;
+  
+}
+
+.shop-item-image:after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.centar{
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+.shop-item-detail {
+  position: absolute;
+  padding: 0.7vw 1vw;
+  opacity: 0;
+  z-index: 2;
+  font-weight: 900;
+  background: #111;
+  text-align: center;
+  border-radius: 0;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2.5vw;
+  color: rgb(255, 255, 255);
+  transform: translateY(-12vw);
+  -webkit-transform: translateY(-12vw);
+  -ms-transform: translateY(-12vw);
+}
+
+.shop-item-title {
+  font-weight: 400;
+  font-size: 14px;
+  color: #111;
+  margin: 15px 0 5px;
+}
+.shop-item-title a{
+  font-weight: 550;
+  font-size: 14px;
+  color: #111;
+  margin: 15px 0 5px;
+}
+
+
+/* Shop item hover */
+.shop-item:hover .shop-item-image:after {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.shop-item:hover .shop-item-detail {
+  opacity: 1;
+  bottom: 50%;
+  transition: 0.3s ease-out;
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+/*
+@media only screen and (max-width: 1199px) 
+{
+  .sbtn2{
+    font-size: 16px; 
+  }
+  .shop-item-detail{
+    left: 35px;
+  }
+}
+  
+@media only screen and (max-width: 991px) 
+{
+  .sbtn2{
+    font-size: 12px; 
+  }
+  .shop-item-detail{
+    left: 15px;
+  
+  }
+}
+
+@media only screen and (max-width: 767px) 
+{
+  .sbtn2{
+    font-size: 12px; 
+  }
+  .shop-item-detail{
+    left: 30px;
+  
+  }
+}
+
+@media only screen and (max-width: 575px) 
+{
+  .sbtn2{
+    font-size: 26px; 
+    font-weight: 520;
+    font-size: 3vw;
+  }
+  .shop-item-detail{
+    left: 25vw;
+  
+  }
+}
+
+@media only screen and (max-width: 375px) 
+{
+  .sbtn2{
+    font-size: 26px; 
+    font-weight: 520;
+    font-size: 3vw;
+  }
+  .shop-item-detail{
+    left: 22vw;
+  
+  }6vw
+}
+
+@media only screen and (max-width: 280px) 
+{
+  .sbtn2{
+    font-size: 26px; 
+    font-weight: 520;
+    font-size: 3vw;
+  }
+  .shop-item-detail{
+    left: 17vw;
+  
+  }
+}
+
+@media only screen and (min-width: 1400px) 
+{
+  .sbtn2{
+    font-size: 1.5vw;
+  }
+  .shop-item-detail{
+    left: 6vw;
+  
+  }
+}
+
+@media only screen and (min-width: 1920px) 
+{
+  .sbtn2{
+    font-size: 1.5vw;
+  }
+  .shop-item-detail{
+    left: 2vw;
+  
+  }
+}
+
+@media only screen and (min-width: 3840px) 
+{
+  .sbtn2{
+    font-size: 0.5vw;
+  }
+  .shop-item-detail{
+    left: 2vw;
+  
+  }
+}
+*/
+/*BG*/
+
+#bg {
+  position: absolute;
+  font-weight: 500;
+  top: 45%;
+  font-size: 45px;
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 0.01px;
+
+}
+#bg2 {
+  font-family: Gabriola;
+  position: absolute;
+  top: 55%;
+  font-style: italic; 
+  font-weight: 590;
+  letter-spacing: 0.01px;
+  font-size: 17px;
+}
+
+#bg-slika,
+#bg2,
+#bg{
+  transform: translateY(1.6%);
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  filter:  brightness(50%);
+}
+#bg-slika{
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  -webkit-user-drag: none;
+}
+.bg-text{
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  text-align: center;
+  transform: translateY(-45vw);
+  color: rgb(240, 240, 240);
+  font-size:2.5vw;
+  letter-spacing: 0.1px;
+  font-family: Courgette;
+
+}
+
+.bg-text h2{
+  font-size:4.5vw;
+  font-family: PTSerif;
+  letter-spacing: 0.1px;
+  font-weight: 570;
+}
+
+
+/*Filteri*/
+.filteri{
+  transform: translateY(-5vw);
+}
+.form-control {
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  padding: 8px 37px;
+  opacity: 1;
+  border: 1px solid #bdbdbd;
+  border-radius: 2px;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.form-control:focus {
+  border-color: #CACACA;
+}
+
+.form-control:hover{
+  border: 2px solid #bdbdbd;
+  
+}
+
+
+/*Citat*/
+
+.citat{
+  top: -18vw;
+}
+.blockquote-custom {
+  position: relative;
+  font-size: 1.1rem;
+  font-style: italic; 
+}
+
+.blockquote-custom-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -25px;
+  left: 50px;
+}
+
+
+.quote-boja{
+  background-color: #000;
+}
+/*Contact*/
+
+#submitb{
+padding: auto;
+margin: auto;
+font-family: sans-serif;
+text-transform: uppercase;
+letter-spacing: 2px;
+background: #111;
+border: 2px solid #111;
+    color: #fff;
+    border-radius: 3px;
+}
+
+#submitb:hover{
+  background: rgb(255, 255, 255);
+    color: #111;
+    border: 2px solid #111;
+}
+
+.kontakt-text{
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.kontakt-slika{
+  background-image: url('../assets/images/shop/make-a-phone-call-gc33156e80_1920.jpg') ;
+  background-position: 0% 15%;
+}
+
+/*Footer*/
+
+.hr-f{
+  border-top: 3px dotted rgb(255, 255, 255);
+  
+}
+.footer-boja{
+  color: #fafafa;
+  background-color: rgb(0, 0, 0);
+}
+
+footer a{
+  color: #c7c7c7;
+
+}
+
+footer a:hover{
+  color: #ffffff;
+
+}
+
+.footer-manji{
+  padding: 70px;
+}
+
+.rad-naslov{
+  font-size: small;
+}
+.footer-naslov{
+  font-weight: 550;
+}
+.footer{
+  width: 100vw;
+}
+/*Kosarica*/
+
+.naslov-kosarica{
+  color:rgb(255, 255, 255);
+  height: 20vw;
+  font-size: 5vh;
+  filter:  brightness(200%);
+  font-family: PTSerif;
+  transform:translateY(-30vw);
+}
+.glavna-tab{
+  color: #fafafa;
+  background-color: rgb(0, 0, 0);
+  height: 4vw;
+}
+.kosarica-slika{
+  max-width: 4vw;
+  max-height: 4vw;
+}
+.kosarica-tab{
+  font-size: 14px;
+  text-align: center;
+
+}
+@media only screen and (max-width: 396px) 
+{
+  .kosarica-tab{
+  font-size: 3vw;
+  }
+}
+.ukloni{
+  color: #111;
+  text-align: center;
+  padding: 3vw;
+}
+.ukloni:hover{
+  color: #666;
+}
+#kolicina{
+  max-width: 9vw;
+  transform: translateY(50%);
+}
+.kosarica-ime{
+  top: 0%;
+}
+.checkout-sve{
+  height: 15vw;
+font-size: 15px;
+}
+.brisanje{
+ float:right
+}
+.prazna-kosarica h1{
+font-size: 25vw;
+}
+.prazna-kosarica p{
+  font-size: 5vw;
+  }
+
+@media only screen and (max-width: 768px) 
+{
+  .naslov-kosarica{
+    height: 20vw;
+    font-size: 10vw;
+    font-family: PTSerif;
+    transform:translateY(-45vw);
+  }
+  .checkout-sve{
+    height: 15vw;
+  font-size: 12px;
+  }
+}
+.brisanje-tipka{
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 90%;
+    background: #111;
+    color: #fff;
+    border: 2px solid black;
+    padding: 5% 2vw;
+}
+.brisanje-tipka:hover{
+    background: #fff;
+    color: #000;
+    transition: 0.1s ease-out;
+}
+
+#kosarica-bg{
+  background-image: url('../assets/images/shop/marketing-online-ge9565e7cb_1920.jpg') ;
+  background-position: 0% 15%;
+  filter:  brightness(50%);
+}
+
+.kosarica-ime-proizvoda:hover,
+.kosarica-slika-img:hover
+{
+  opacity: 0.8;
+}
+/*Odabir*/
+
+::selection {
+  background-color: rgb(15, 15, 15);
+  color: rgb(255, 255, 255);
+  }
+
+  .footer ::selection,
+  .glavna-tab ::selection{
+    color: rgb(15, 15, 15);
+    background-color: rgb(236, 236, 236);
+  }
+
+  .btns ::selection{
+    color: rgb(15, 15, 15);
+    background-color: rgb(236, 236, 236);
+  }
+
+  .btns:hover ::selection{
+    background-color: rgb(15, 15, 15);
+    color: rgb(255, 255, 255);
+  }
+  .kontakt-pocetak ::selection{
+    color: rgb(15, 15, 15);
+    background-color: rgb(236, 236, 236);
+  }
+ .pokazivac{ 
+  cursor: pointer;
+ }
+
+  /*Font*/
+
+  @font-face {
+    font-family: "azonix";
+    src: url("../assets/font/Azonix-1VB0.otf");
+  }
+
+  @font-face {
+    font-family: "moondance";
+    src: url("../assets/font/MoonDance-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "EastSeaDokdo";
+    src: url("../assets/font/EastSeaDokdo-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "PTSerif";
+    src: url("../assets/font/PTSerif-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "NotoNastaliqUrdu";
+    src: url("../assets/font/NotoNastaliqUrdu-VariableFont_wght.ttf");
+  }
+
+  @font-face {
+    font-family: "Courgette";
+    src: url("../assets/font/Courgette-Regular.ttf");
+  }
+
+  /*Modal*/
+  .modal-backdrop {
+    z-index: 1;
+  }
+.modal{
+  position: fixed;
+  right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    transform: translateY(10vh);
+}
+.modal input{
+  border: 2px solid #eeeeee;
+}

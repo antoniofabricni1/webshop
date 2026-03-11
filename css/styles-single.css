@@ -1,0 +1,583 @@
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: scrollbar;
+  }
+  
+  body {
+    background: #fff;
+    font: 400 12px/1.8 "Open Sans", sans-serif;
+    color: #666;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  iframe {
+    border: 0;
+  }
+  a:not(.natpis){
+    Text-decoration: none;
+  }
+  
+  .align-center {
+    text-align: center;
+  }
+  
+  .align-left {
+    text-align: left !important;
+  }
+  
+  .position-relative {
+    position: relative;
+  }
+  
+  .leftauto {
+    right: 0 !important;
+    left: auto !important;
+  }
+  
+
+.product-gallery {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin: 10px 0 0;
+  }
+  
+  .product-gallery li {
+    display: inline-block;
+    width: 15%;
+    margin: 0 5px;
+  }
+  
+  .product-gallery li:first-child {
+    margin-left: 0;
+  }
+  
+  .product-title {
+    margin: 0 0 20px;
+    color: #111;
+  }
+  
+  
+  .amount {
+    font-size: 32px;
+    color: #111;
+  }
+
+  .navbar-custom + .main {
+    margin-top: 50px;
+  }
+  
+  .main {
+    position: relative;
+   
+    background-color: #fff;
+    z-index: 1;
+  }
+  
+  .module,
+  .module-small {
+    position: relative;
+    padding: 140px 0;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  
+  
+
+  /*button*/
+  .btns {
+    position: absolute;
+    border-radius: 0;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    padding: 8px 37px;
+    background: #111;
+    color: #fff;
+    border: 2px solid #111;
+  }
+  .btns:hover{
+    position: absolute;
+    background: #fff;
+    color: #000;
+    border: 2px solid black;
+  }
+
+  /*shop single css*/
+
+  .icon-basket{
+    position: absolute;
+    opacity: 0;
+  }
+  
+
+  
+  
+  #natpis1,
+  #natpis2,
+  #natpis3,
+  #natpis4{
+    font-weight: 700;
+    font-family:"Open Sans", sans-serif;
+    letter-spacing: 2px;
+    font-size: 15px;
+    color: #111;
+  }
+  .related-natpis:hover{
+    color: #666;
+  }
+  
+  #gallery4:hover,
+  #gallery5:hover,
+  #gallery6:hover{
+    transition: 0.3s ease-out;
+    opacity: 0.7;
+    
+ }
+
+ .natpis{
+  font-weight: 700;
+ }
+ #amount{
+  font-weight: 500;
+ }
+#gallery4, 
+#gallery5, 
+#gallery6{
+  border: 1px solid #cacaca;
+}
+.tablica{
+  transform: translateY(3vw);
+  width: 90%;
+  
+}
+.tablica th,
+.tablica td{
+  font-size: 1vw;
+  height: 3vw;
+  border: 2px solid #cacaca;
+  text-align: center;
+}
+
+.tablica th{
+  font-size: 1.2vw;
+}
+
+@media only screen and (max-width: 576px)  {
+  .tablica{
+    transform: translateY(18vw);
+    width: 80%;
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  .tablica th,
+.tablica td{
+  font-size: 3vw;
+  height: 4.5vw;
+  border: 2px solid #cacaca;
+  text-align: center;
+}
+}
+
+.povezano:hover  img{
+  opacity: 0.8;
+}
+ /*shop single responzivnost*/
+
+.centar{
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+    .sbtn{
+      transform: translateX(-200vw);
+     position: absolute;
+     border-radius: 0;
+     font-family: sans-serif;
+    text-transform: uppercase;
+     letter-spacing: 0.5px;
+     font-size: 1vw;
+     padding: 0.65vw 3vw;
+     background: #111;
+     color: #fff;
+     bottom: 50%;
+     opacity: 0;
+     border: 2px solid black;
+     
+   }
+
+   .sbtn:hover{
+    color: rgb(255, 255, 255);
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+
+  }
+  
+ .product:hover{
+     color: #fff;
+ }
+ 
+ 
+    .povezano:not(.sbtn:hover):hover .sbtn{
+     transition: 0.2s ease-out;
+     transform: translateX(0px);
+     opacity: 1;
+    
+     
+   }
+
+   .icon-basket{
+     position: relative;
+     opacity: 1;
+   }
+   
+  
+   @media only screen and (max-width: 768px)  {
+    .sbtn{
+      display: none;
+    }
+  }
+
+/*
+   @media only screen and (min-width: 992px)  {
+    .sbtn{
+      position: absolute;
+      border-radius: 0;
+      font-family: sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      padding: 8px 7px;
+      background: #111;
+      color: #fff;
+      bottom: 50%;
+      opacity: 0;
+    }
+   
+  .product:hover{
+      color: #fff;
+  }
+  
+  
+     .shop-item:hover .sbtn {
+      transition: 0.3s ease-out;
+      transform: translateX(30px);
+      opacity: 1;
+     
+      
+    }
+    .icon-basket{
+      position: relative;
+      opacity: 1;
+    }
+   }
+
+   @media only screen and (min-width: 1200px)  {
+    .sbtn{
+      position: absolute;
+      border-radius: 0;
+      font-family: sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 15px;
+      padding: 10px 10px;
+      background: #111;
+      color: #fff;
+      bottom: 50%;
+      opacity: 0;
+    }
+   
+  .product:hover{
+      color: #fff;
+  }
+  
+  
+     .shop-item:hover .sbtn {
+      transition: 0.3s ease-out;
+      transform: translateX(35px);
+      opacity: 1;
+     
+      
+    }
+    .icon-basket{
+      position: relative;
+      opacity: 1;
+    }
+   }
+
+   @media only screen and (min-width: 1400px)  {
+    .sbtn{
+      position: absolute;
+      border-radius: 0;
+      font-family: sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 15px;
+      padding: 10px 10px;
+      background: #111;
+      color: #fff;
+      bottom: 50%;
+      opacity: 0;
+    }
+   
+  .product:hover{
+      color: #fff;
+  }
+  
+  
+     .shop-item:hover .sbtn {
+      transition: 0.3s ease-out;
+      transform: translateX(60px);
+      opacity: 1;
+     
+      
+    }
+    .icon-basket{
+      position: relative;
+      opacity: 1;
+    }
+   }
+
+*/
+  /*loader*/
+
+  .page-loader {
+    position: fixed;
+    background: #000;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 9998;
+  }
+  
+  .loader {
+    position: absolute;
+    border-left: 2px solid #ffffff;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    height: 46px;
+    width: 46px;
+    left: 50%;
+    top: 50%;
+    margin: -23px 0 0 -23px;
+    text-indent: -9999em;
+    font-size: 10px;
+    z-index: 9999;
+    -webkit-animation: load 0.8s infinite linear;
+    -moz-animation: load 0.8s infinite linear;
+    ms-animation: load 0.8s infinite linear;
+    o-animation: load 0.8s infinite linear;
+    animation: load 0.8s infinite linear;
+  }
+  
+  .loader,
+  .loader:after {
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+  }
+  
+  @-webkit-keyframes load {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes load {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+/*--------------------------------------------------------------
+	Navbar
+--------------------------------------------------------------*/
+.navbar-custom {
+  background-color: rgba(10, 10, 10, 0.9);
+  border: 0;
+  border-radius: 0;
+  z-index: 1000;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  transition: background, padding 0.4s ease-in-out 0s;
+}
+
+.navbar-custom .navbar-brand {
+  letter-spacing: 4px;
+  font-weight: 400;
+  font-size: 22px;
+  color: #fff;
+}
+
+#navbarToggleExternalContent{
+  transform: translateY(1.5%);
+}
+
+#navbar{
+    background-color: rgb(0, 0, 0);
+}
+
+.navbar{
+  background-color: rgb(0, 0, 0);
+  border: 0;
+  border-radius: 0;
+  z-index: 1000;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  transition: background, padding 0.4s ease-in-out 0s;
+}
+
+.nav-boja{
+  color: #000;
+}
+
+#brand{
+  color: #fff;
+  font-family: "azonix";
+  transform: translateY(10%);
+}
+
+
+.navigacija a{
+  
+  margin: auto;
+  padding: 14px 16px;
+  font-weight: 700;
+  font-family:"Open Sans", sans-serif;
+  letter-spacing: 2px;
+  font-size: 15px;
+  color: rgb(175, 175, 175);
+  
+}
+.navigacija a:hover {
+  bottom: 50%;
+  transition: 0.2s ease-in-out;
+  color: #fff;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+
+.logo{
+  display: block;
+  width: 30px;
+  height: 30px; 
+  margin: 10px;
+}
+.brend{
+  display: flex;
+}
+
+.kosarica{
+  margin-left: auto; 
+  margin-right: 2vw;
+  background-color: #000;
+  border: 2px solid black;
+  color: #fafafa;
+}
+.kosarica:focus,
+.kosarica:hover
+{
+  background-color: #000;
+  border: 2px solid black;
+  color: #fafafa;
+}
+.kosarica-broj{
+  background-color: #fafafa;
+  color: #111;
+}
+@font-face {
+  font-family: "azonix";
+  src: url("../assets/font/Azonix-1VB0.otf");
+}
+
+
+/*Footer*/
+
+.hr-f{
+  border-top: 3px dotted rgb(255, 255, 255);
+  
+}
+.footer-boja{
+  color: #fafafa;
+  background-color: rgb(0, 0, 0);
+}
+
+footer a{
+  color: #c7c7c7;
+
+}
+
+footer a:hover{
+  color: #ffffff;
+
+}
+
+.footer-manji{
+  padding: 70px;
+}
+
+.rad-naslov{
+  font-size: small;
+}
+.footer-naslov{
+  font-weight: 550;
+}
+
+/*Odabir*/
+
+::selection {
+  background-color: rgb(15, 15, 15);
+  color: rgb(255, 255, 255);
+  }
+
+  .footer ::selection,
+  .glavna-tab ::selection{
+    color: rgb(15, 15, 15);
+    background-color: rgb(236, 236, 236);
+  }
+
+  .btns ::selection{
+    color: rgb(15, 15, 15);
+    background-color: rgb(236, 236, 236);
+  }
+
+  .btns:hover ::selection{
+    background-color: rgb(15, 15, 15);
+    color: rgb(255, 255, 255);
+  }
+  .kontakt-pocetak ::selection{
+    color: rgb(15, 15, 15);
+    background-color: rgb(236, 236, 236);
+  }
+ .pokazivac{ 
+  cursor: pointer;
+ }
